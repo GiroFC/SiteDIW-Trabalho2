@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Blog Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/67744dbd0f.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    </style>
+</head>
+
+<body class="body">
+    <header class="header">
+        <nav id="nav">
+            <button id="btn-mobile">Menu
+                <span id="hamburguer"></span>
+            </button>
+            <ul class="menu">
+                <li><a class="nav-item" href="#">Perfil</a></li>
+                <li><a class="nav-item" href="#projetos">Projetos</a></li>
+                <li><a class="nav-item" href="#">Experiencia</a></li>
+                <li><a class="nav-item" href="#repositorios">Repositórios Github</a></li>
+                <li><a class="nav-item" href="#conteudo">Conteúdo</a></li>
+            </ul>
+
+            <div class="search-box">
+                <input type="text" class="search-text" placeholder="Pesquisar">
+                <a href="#" class="search-btn" id="search-btn">
+                    <img src="/images/loupe.png" alt="Lupa" height="20px" width="20px">
+                </a>
+            </div>
+
+        </nav>
+
+
+    </header>
+
+    <main class="container main">
+        <div class="row">
+            <div class="col-12">
+                <!--Duas colunas para imagem e texto do perfil-->
+                <section class="row perfil" id="perfil">
+                </section>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-2 fotoPerfil">
+            </div>
+
+            <hr>
+            <hr>
+
+
+            <div class="pesquisa">
+                <input type="text" id="input-pesquisa" placeholder="Pesquisar perfil no Github">
+                <button id="botaopesquisa" onclick="pesquisa()"> Pesquisar</button>
+
+                <div class="display-pesquisa" id="display-pesquisa">
+
+                </div>
+            </div>
+
+            <hr>
+            <hr>
+
+        </div>
+        <!--4 colunas pra projetos-->
+        <div class="row">
+            <div class="projetos" id="projetos">
+                <div class="col-12 col-sm-12 col-md6 col-lg-6 titulo">
+                    <h1>Projetos</h1>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown">
+                        Categoria: <b>TODOS</b>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                        <li><a class="dropdown-item" href="#">Web Sites</a></li>
+                        <li><a class="dropdown-item" href="#">Arte Gráfica</a></li>
+                        <li><a class="dropdown-item" href="#">Podcast</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row cardProjetos">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                <a href="https://scratch.mit.edu/projects/562260899/"><img src="/images/scratch.png"></a>
+                Jogo em Scratch LIP - 2021
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                <a href="#"><img src="/images/site.jfif"></a>
+                Site Pessoal DIW - 2021
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                <a href="https://up-template.herokuapp.com/index.php"><img src="/images/up.png"></a>
+                Tamplate padrão - Site Up! - 2021
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                <a href="https://www.youtube.com/channel/UCWP51msvzg6WTxcvX9PsOww"><img src="/images/youtube.jpg"></a>
+                Canal - Exteção IC - 2021
+            </div>
+        </div>
+        <div class="buttonPlus">
+            <button type="button" class="btn btn-dark">+ Carregar mais projetos</button>
+        </div>
+        <!--Duas colunas para experiencia-->
+        <!-- <div class="row experiencia">
+                    <div class="experienciaTitulo">
+                        <div class="col-12 col-sm-12 col-md12 col-lg-12p">
+                            <h1>Experiência</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row cardExp">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <img src="/images/netflix 2.png">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <h3>Netflix - Desenvolvedor UX</h3>
+                        <p>Trabalhei como desenvolvedor front-end das aplicações mobile da Netflix Brasil.</p>
+                        <h4><i>Periodo: 04/2019 até o momento</i></h4>
+                    </div>
+                    
+                    <hr>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <img src="/images/raphael-brasileiro-aRUDXC5sxcA-unsplash.jpg">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <h3>Clock Wise - Desenvolvedor Mobile</h3>
+                        <p>Trabalhei como desenvolvedor tanto front como back-end das aplicações mobile da empresa Clock
+                            Wise.</p>
+                        <h4><i>Periodo: 04/2019 até o momento</i></h4>
+                    </div>
+                    
+                    <hr>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <img src="/images/localiza.jpg">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <h3>Localiza - Desenvolvedor de softwere</h3>
+                        <p>Meu primeiro emprego como desenvolvedor foi na Localiza, onde desenvolvi e mative um softwere
+                            próprio da empresa.</p>
+                        <h4><i>Periodo: 09/2016 até o 03/2019</i></h4>
+                    </div>
+                    
+                    <hr>
+                    <div class="buttonPlus">
+                        <button type="button" class="btn btn-dark">+ Carregar mais experiências</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </main>
+
+    <section class="repository">
+        <div class="repositoryTitulo">
+            <div>
+                <h1>Repositórios GitHub</h1>
+            </div>
+        </div>
+        <div class="row cardRepository" id="repositorio">
+
+            <div class="card_repositorio col-lg-4 card1">
+                <i class="fas fa-folder icon_repo"></i>
+                <article>
+                    <h5 class="title_repo">Sprint2-TIAW-Tamplate
+                    </h5>
+                    <p class="card_txt">Repositório de uma pagina Web, desenvolvida para a Disciplina de TIAW. O
+                        repositório apresenta o código fonte do tamplate padrão do site pedido</p>
+                    <a href="https://github.com/GiroFC/Sprint2-TIAW-Tamplate">Link para o repo</a>
+                    </p>
+                </article>
+            </div>
+            <div class="card_repositorio col-lg-4 card2">
+                <i class="fas fa-folder icon_repo"></i>
+                <article>
+                    <h5 class="title_repo">Site-Lip
+                    </h5>
+                    <p class="card_txt">Repositório que contem o código fonte de um site desenvolvido para a disciplina
+                        de LIP, que contem uma pagina com o objetivo de intruir novos usuários à plataforma Scratch</p>
+                    <a href="https://github.com/GiroFC/Site-Lip">Link para o repo</a>
+                    </p>
+                </article>
+            </div>
+            <div class="card_repositorio col-lg-4 card3">
+                <i class="fas fa-folder icon_repo"></i>
+                <article>
+                    <h5 class="title_repo">Listas-AEDSemC
+                    </h5>
+                    <p class="card_txt">Listas de programas desenvolvidos na linguagem C, para a disciplina AED I.</p>
+                    <a href="https://github.com/GiroFC/Listas-AEDSemC">Link para o repo</a>
+                    </p>
+                </article>
+            </div>
+            <div class="buttonPlus">
+                <button type="button" class="btn btn-dark">+ Carregar mais Repositórios</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container recomendations" id="recomendation">
+        <div class="row">
+            <div class="col-12">
+                <div class="row cardReco">
+                    <div class="tituloReco">
+                        <H1>Recomendações de Condeúdo</H1>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <iframe width="380" height="260" src="https://www.youtube.com/embed/DnODupiIAiE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3><b>Video: </b>Descrição</h3>
+                        <p></p><b>Diretor: </b> Nome do diretor</p>
+                        <p></p><b>Roteiro: </b> Nome do Roteirista: <b>Estreia: </b>2020</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                        <iframe width="380" height="260" src="https://www.youtube.com/embed/x-4z_u8LcGc"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3><b>Video: </b>Descrição</h3>
+                        <p></p><b>Diretor: </b> Nome do diretor</p>
+                        <p></p><b>Roteiro: </b> Nome do Roteirista: <b>Estreia: </b>2020</p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+
+                        <iframe width="380" height="260" src="https://www.youtube.com/embed/pKP9-SeOLqg"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <h3><b>Video: </b>Descrição</h3>
+                        <p></p><b>Diretor: </b> Nome do diretor</p>
+                        <p></p><b>Roteiro: </b> Nome do Roteirista: <b>Estreia: </b>2020</p>
+                    </div>
+                    <div class="buttonPlus">
+                        <button type="button" class="btn btn-dark">+ Carregar mais recomendações</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+
+        <h3>Copyright 2021 - Disciplina de Desenvolvimento de Interfaces Web - <b>ICEI PUC minas</b></h3>
+        <img src="/images/Puc logo.png">
+
+    </footer>
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
